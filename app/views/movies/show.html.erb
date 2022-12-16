@@ -1,0 +1,17 @@
+<div class="card bg-light">
+  <div class="card-body">
+    <h1 class="card-title"><%= @movie.name %></h1>
+    <p class="card-text">  <%= @movie.year %>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <strong>Film director:</strong> <%=@movie.director %></li>
+    <li class="list-group-item"> <strong>Worldwide gross:</strong> <%=@movie.worldwide_gross %> $</li>
+  </ul>
+</div>
+<br/>
+<div>
+  <%= link_to "Edit", edit_movie_path(@movie), class:"btn btn-primary" %> 
+  <%= link_to "Back", movies_path, class:"btn btn-light" %>
+  <br/><br/>
+  <%= button_to "Destroy", @movie, method: :delete, class:"btn btn-danger"  %>
+</div>
